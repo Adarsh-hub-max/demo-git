@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An introduction to Hibernate, the Java ORM framework.">
+  <title>About Hibernate | Hibernate Learning Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="about.html"><span class="brand-mark">H</span> Hibernate Learning Lab</a>
+    <a class="header-link" href="test.html">Take the knowledge check <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">JAVA PERSISTENCE, MADE CLEAR</p>
+      <h1>Meet <span>Hibernate.</span></h1>
+      <p class="hero-copy">A practical introduction to the framework that connects Java applications to relational data.</p>
+      <a class="button button-primary" href="test.html">Continue to the quiz <span aria-hidden="true">→</span></a>
+      <div class="hero-note"><span class="status-dot"></span> Read the guide, then put what you learned to the test.</div>
+    </section>
+
+    <section class="content-layout" aria-label="About Hibernate">
+      <aside class="article-aside">
+        <span class="aside-label">IN THIS GUIDE</span>
+        <ol>
+          <li>What Hibernate does</li>
+          <li>How object mapping works</li>
+          <li>Core building blocks</li>
+          <li>Why developers use it</li>
+        </ol>
+        <div class="aside-card"><span class="aside-icon">✳</span><p>Read at your own pace. Your summary will be checked against the guide.</p></div>
+      </aside>
+
+      <article id="hibernate-content" class="article-card">
+        <div class="article-meta"><span class="tag">THE BASICS</span><span>6 MIN READ</span></div>
+        <h2>What is Hibernate?</h2>
+        <p>Hibernate is an open source object relational mapping framework for Java. It helps an application store, retrieve, and manage data in a relational database. Instead of writing every database operation by hand, developers can work with Java objects while Hibernate handles much of the communication with the database.</p>
+
+        <h3>From Java objects to database rows</h3>
+        <p>Object relational mapping, often shortened to ORM, connects Java classes to database tables. A class can represent a table, an object can represent a row, and class fields can correspond to columns. Hibernate maps these objects and their relationships to relational data. This lets developers use familiar Java code for many persistence tasks.</p>
+        <p>Hibernate can generate SQL statements, execute queries, and turn returned rows into Java objects. It supports databases such as PostgreSQL, MySQL, and Oracle through database drivers and dialects. Applications can change database systems with fewer changes to their persistence code, although database-specific behavior may still matter.</p>
+
+        <h3>Important building blocks</h3>
+        <p>An entity is a Java class whose instances are stored in the database. Annotations such as Entity and Id describe the class and its primary key. A Session is used to interact with persistent objects, while a SessionFactory creates sessions and is commonly shared by the application. Transactions group related operations so they can commit together or roll back when something fails.</p>
+        <p>Hibernate also provides a query language called HQL, which works with entities and properties rather than directly naming database tables and columns. Lazy loading can defer loading related data until it is needed. Caching can reduce repeated database work. These features should be configured thoughtfully because they affect performance and application behavior.</p>
+
+        <h3>Why teams choose it</h3>
+        <p>Hibernate reduces repetitive database access code and helps keep persistence logic organized. It supports relationships between entities, schema generation, transactions, and multiple database platforms. It is commonly used in Java applications and can be used with frameworks such as Spring. Hibernate does not remove the need to understand SQL, data modeling, or transaction boundaries; it provides tools that make those tasks easier to manage.</p>
+        <div class="article-callout"><span aria-hidden="true">↳</span><p><strong>In short:</strong> Hibernate maps Java objects to relational data and helps applications manage persistence, queries, and transactions.</p></div>
+      </article>
+    </section>
+
+    <section class="next-step">
+      <div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Turn what you learned into a score.</h2></div>
+      <a class="button button-light" href="test.html">Start the knowledge check <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><span>Hibernate Learning Lab</span><span>A short guide to Java persistence</span></footer>
+</body>
+</html>
