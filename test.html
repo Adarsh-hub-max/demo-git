@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Summarize what you learned about Hibernate.">
+  <title>Knowledge Check | Hibernate Learning Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="about.html"><span class="brand-mark">H</span> Hibernate Learning Lab</a>
+    <a class="header-link" href="about.html">← Back to the guide</a>
+  </header>
+
+  <main class="form-page">
+    <div class="form-heading">
+      <p class="eyebrow">YOUR TURN</p>
+      <h1>Show us what <span>stuck.</span></h1>
+      <p>Share a short summary of the Hibernate guide. Your score is based on how many of your summary's words appear in the guide.</p>
+    </div>
+
+    <p id="form-message" class="form-message" role="alert" hidden></p>
+
+    <form class="quiz-card" action="verify.jsp" method="post">
+      <div class="form-step"><span>01</span><span>YOUR DETAILS</span></div>
+      <div class="field-grid">
+        <label class="field"><span>Full name</span><input type="text" name="userName" placeholder="e.g. AlexMorgan" autocomplete="name" required minlength="10" maxlength="10"><small>Enter exactly 10 characters; the first must be a capital letter.</small></label>
+        <label class="field"><span>Email address</span><input type="email" name="email" placeholder="you@gmail.com" autocomplete="email" required><small>Use an address ending in @gmail.com.</small></label>
+      </div>
+
+      <div class="form-step form-step-spaced"><span>02</span><span>YOUR SUMMARY</span></div>
+      <label class="field"><span>What is Hibernate, and what does it help Java applications do?</span><textarea name="summary" rows="7" placeholder="Write your summary here..." required></textarea><small>Every matching word counts toward your score. Punctuation and letter case do not affect matching.</small></label>
+
+      <div class="form-actions"><a class="text-link" href="about.html">Review the guide</a><button class="button button-primary" type="submit">Submit summary <span aria-hidden="true">→</span></button></div>
+      <p class="privacy-note">Your details are used only to display your result in this demo.</p>
+    </form>
+  </main>
+  <footer class="site-footer"><span>Hibernate Learning Lab</span><span><a href="about.html">Back to the guide</a></span></footer>
+  <script>
+    const formError = new URLSearchParams(window.location.search).get('error');
+    if (formError) {
+      const message = document.getElementById('form-message');
+      message.textContent = formError;
+      message.hidden = false;
+      message.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>
